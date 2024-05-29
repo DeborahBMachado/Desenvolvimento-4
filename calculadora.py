@@ -1,18 +1,31 @@
-def calculadora(num1, num2, operacao):
-    if operacao == "soma":
-        return num1 + num2
-    elif operacao == "subtração":
-        return num1 - num2
-    elif operacao == "multiplicação":
-        return num1 * num2
-    elif operacao == "divisão":
-        if num2 != 0:
-            return num1 / num2
-        else:
-            return "Erro: divisão por zero!"
-    else:
-        return 0
+#função para desenvolvimento de uma calculadora
+def calculadora():
+  a = float(input("Digite o primeiro numero: \n"))
+  b = float(input("Digite o segundo numero: \n"))
+  #instruções para definição das operações
+  operacao = input("""Digite a operação desejada conforme abaixo:
++ para adicao
+- para subtracao
+* para multiplicacao
+/ para divisao\n""")
+    #estruturas condicionais para os cálculos dependendo da operação escolhida
+  if operacao == "+":
+    print("{} + {} = ".format(a, b))
+    print(a + b)
 
-# Exemplo de uso:
-resultado = calculadora(10, 5, "soma")
-print(f"Resultado da soma: {resultado}")
+  elif operacao == "-":
+      print("{} - {} = ". format(a, b))
+      print(a - b)
+    
+  elif operacao == "*":
+      print("{} * {} = ". format(a, b))
+      print(a * b)
+
+  elif operacao == "/":
+    print("{} / {} = ". format(a, b))
+    print(a / b)
+  
+  else:
+    print("Operacao invalida")
+ 
+calculadora() # chamada da função
